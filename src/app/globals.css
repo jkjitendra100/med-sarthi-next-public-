@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #040613;
+    --card: #ffffff;
+    --card-foreground: #040613;
+    --popover: #ffffff;
+    --popover-foreground: #040613;
+    --primary: #0d69aa;
+    --primary-foreground: #e5f1ff;
+    --secondary: #13aae1;
+    --secondary-foreground: #08200e;
+    --muted: #f0f4fa;
+    --muted-foreground: #72828f;
+    --accent: #f0f4fa;
+    --accent-foreground: #08200e;
+    --destructive: #ff4c4c;
+    --destructive-foreground: #e5f1ff;
+    --border: #dde3e9;
+    --input: #dde3e9;
+    --ring: #040613;
+    --radius: 0.5rem;
+    --chart-1: #e66f6f;
+    --chart-2: #349e63;
+    --chart-3: #2f4b5b;
+    --chart-4: #6fbea5;
+    --chart-5: #d44d4d;
+  }
+
+  .dark {
+    --background: #0a0c25;
+    --foreground: #e5f1ff;
+    --card: #0a0c25;
+    --card-foreground: #e5f1ff;
+    --popover: #0a0c25;
+    --popover-foreground: #e5f1ff;
+    --primary: #e5f1ff;
+    --primary-foreground: #08200e;
+    --secondary: #1b293d;
+    --secondary-foreground: #e5f1ff;
+    --muted: #1b293d;
+    --muted-foreground: #76828d;
+    --accent: #1b293d;
+    --accent-foreground: #e5f1ff;
+    --destructive: #4d1a0a;
+    --destructive-foreground: #e5f1ff;
+    --border: #1b293d;
+    --input: #1b293d;
+    --ring: #c2d2ef;
+    --chart-1: #3399ff;
+    --chart-2: #339966;
+    --chart-3: #cc9933;
+    --chart-4: #993399;
+    --chart-5: #cc3366;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Headings Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  color: var(--heading-color);
+  line-height: var(--heading-line-height);
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: calc(2.5 * 12px);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: calc(2 * 12px);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: calc(1.75 * 12px);
+  font-weight: 500;
+}
+
+h4 {
+  font-size: calc(1.5 * 12px);
+  font-weight: 500;
+}
+
+h5 {
+  font-size: calc(1.25 * 12px);
+  font-weight: 400;
+}
+
+h6 {
+  font-size: calc(1 * 12px);
+  font-weight: 400;
+}
+
+/* Line truncates */
+.truncate-1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+
+.truncate-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.truncate-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.truncate-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+/* Custom scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transform: perspective(500px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transform: perspective(500px) rotateX(5deg) rotateY(5deg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #bcbfc7, #bcbfc7);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #bcbfc7, #bcbfc7);
+  border-radius: 10px;
+}

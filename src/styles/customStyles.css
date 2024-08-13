@@ -1,0 +1,9 @@
+.view-all {
+  color: white;
+  font-size: small;
+  width: 100px;
+  text-align: center;
+  background-color: var(--primary);
+  border-radius: 100px;
+  padding: 7px;
+}
