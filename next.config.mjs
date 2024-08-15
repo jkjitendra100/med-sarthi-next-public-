@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
- // output: "export",
   images: {
     domains: [
       "plus.unsplash.com",
@@ -9,7 +8,6 @@ const nextConfig = {
       "cdn-icons-png.flaticon.com",
     ],
   },
-  presets: ["next/babel"],
   plugins: [
     [
       "@locator/babel-jsx/dist",
@@ -18,9 +16,6 @@ const nextConfig = {
       },
     ],
   ],
-  experimental: {
-    appDir: true,
-  },
 };
 
 export default nextConfig;

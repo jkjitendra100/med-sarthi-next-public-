@@ -32,6 +32,9 @@ export default function Page() {
     fetchAllBlogs();
   }, []);
 
+  console.log(blogs);
+  
+
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div>
